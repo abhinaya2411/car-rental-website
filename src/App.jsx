@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import 'animate.css';
 import About from './pages/About';
 import Cars from './pages/Cars';
@@ -18,20 +18,20 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path ="/" element={<Home />} />
+        <Route path="/" element={<Home />} />
         <Route path="/feature" element={<Feature />} />
-        <Route path='/about' element={<About />} />
-        <Route path='/cars' element={<Cars />} />
-        <Route path='/contact' element={<Contact />} />
-        <Route path='/service' element={<Service />} />
-        <Route path='/team' element={<Team />} />
-        <Route path='/testimonial' element={<Testimonial />} />
-        <Route path='/blog' element={<Blog />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/cars" element={<Cars />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/service" element={<Service />} />
+        <Route path="/team" element={<Team />} />
+        <Route path="/testimonial" element={<Testimonial />} />
+        <Route path="/blog" element={<Blog />} />
         <Route path="/login" element={<Login />} />
-         <Route path="/register" element={<Register />} />
-       
+        <Route path="/register" element={<Register />} />
+        <Route path="*" element={<h1>404 - Page Not Found</h1>} />
       </Routes>
- <BackToTop />
+      <BackToTop />
     </Router>
   );
 }

@@ -1,10 +1,17 @@
 import {  useEffect } from "react";
 import { Link } from 'react-router-dom';
+import Navbar from "../pages/Navbar"
 import team1 from '../assets/img/team-1.jpg';
 import team2 from '../assets/img/team-2.jpg';
 import team3 from '../assets/img/team-3.jpg';
 import team4 from '../assets/img/team-4.jpg';
+import aboutIcon1 from "../assets/img/about-icon-1.png";
+import attachmentImg from "../assets/img/attachment-img.jpg";
+import aboutIcon2 from "../assets/img/about-icon-2.png";
+import aboutImg from "../assets/img/about-img.jpg";
 import bannerImg from '../assets/img/banner-1.jpg';
+import featuresImg from "../assets/img/features-img.png";
+import aboutImg1 from "../assets/img/about-img-1.jpg";
 import '../assets/css/style.css';
 
 import AOS from 'aos';
@@ -56,53 +63,7 @@ const About = () => {
         </div>
       </div>
 
-      {/* Navbar & Hero Start */}
-      <div className="container-fluid nav-bar sticky-top px-0 px-lg-4 py-2 py-lg-0">
-        <div className="container">
-          <nav className="navbar navbar-expand-lg navbar-light">
-          <Link to="/" className="navbar-brand d-flex align-items-center px-4 px-lg-0">
-                      <h2 className="m-0 text-primary">
-                        <i className="fa fa-car me-2"></i>CarRental
-                      </h2>
-                    </Link>
-            <button
-              className="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarCollapse"
-            >
-              <span className="fa fa-bars"></span>
-            </button>
-            <div className="collapse navbar-collapse" id="navbarCollapse">
-              <div className="navbar-nav mx-auto py-0">
-                <Link to="/" className="nav-item nav-link">Home</Link>
-                <Link to="/about" className="nav-item nav-link active">About</Link>
-                <Link to="/service" className="nav-item nav-link">Service</Link>
-                <Link to="/blog" className="nav-item nav-link">Blog</Link>
-
-                <div className="nav-item dropdown">
-                  <a href="#" className="nav-link dropdown-toggle" data-bs-toggle="dropdown">
-                    Pages
-                  </a>
-                  <div className="dropdown-menu m-0">
-                    <Link to="/feature" className="dropdown-item">Our Feature</Link>
-                    <Link to="/cars" className="dropdown-item">Our Cars</Link>
-                    <Link to="/team" className="dropdown-item">Our Team</Link>
-                    <Link to="/testimonial" className="dropdown-item">Testimonial</Link>
-                    
-                  </div>
-                </div>
-
-                <Link to="/contact" className="nav-item nav-link">Contact</Link>
-              </div>
-              <Link to="/login" className="btn btn-primary rounded-pill py-2 px-4">
-                Login
-              </Link>
-            </div>
-          </nav>
-        </div>
-      </div>
-      {/* Navbar & Hero End */}
+       <Navbar />
       
     {/* Header Start */}
 <div className="container-fluid bg-breadcrumb">
@@ -144,11 +105,11 @@ const About = () => {
             <div className="col-lg-6">
               <div className="about-item-inner border p-4">
                 <div className="about-icon mb-4">
-                  <img
-                    src="/src/assets/img/about-icon-1.png"
-                    className="img-fluid w-50 h-50"
-                    alt="Vision Icon"
-                  />
+                 <img
+  src={aboutIcon1}
+  className="img-fluid w-50 h-50"
+  alt="Vision Icon"
+/>
                 </div>
                 <h5 className="mb-3">Our Vision</h5>
                 <p className="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
@@ -157,11 +118,12 @@ const About = () => {
             <div className="col-lg-6">
               <div className="about-item-inner border p-4">
                 <div className="about-icon mb-4">
-                  <img
-                    src="/src/assets/img/about-icon-2.png"
-                    className="img-fluid w-50 h-50"
-                    alt="Mission Icon"
-                  />
+                 <img
+  src={aboutIcon2}
+  className="img-fluid w-50 h-50"
+  alt="Mission Icon"
+/>
+
                 </div>
                 <h5 className="mb-3">Our Mission</h5>
                 <p className="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
@@ -206,12 +168,12 @@ const About = () => {
 
             <div className="col-lg-7">
               <div className="d-flex align-items-center">
-                <img
-                  src="/src/assets/img/attachment-img.jpg"
-                  className="img-fluid rounded-circle border border-4 border-secondary"
-                  style={{ width: '100px', height: '100px' }}
-                  alt="Founder"
-                />
+               <img
+  src={attachmentImg}
+  className="img-fluid rounded-circle border border-4 border-secondary"
+  style={{ width: "100px", height: "100px" }}
+  alt="Founder"
+/>
                 <div className="ms-4">
                   <h4>William Burgess</h4>
                   <p className="mb-0">Carveo Founder</p>
@@ -226,18 +188,18 @@ const About = () => {
       <div className="col-xl-6 wow fadeInRight" data-wow-delay="0.2s">
         <div className="about-img">
           <div className="img-1">
-            <img
-              src="/src/assets/img/about-img.jpg"
-              className="img-fluid rounded h-100 w-100"
-              alt="About"
-            />
+           <img
+  src={aboutImg}
+  className="img-fluid rounded h-100 w-100"
+  alt="About"
+/>
           </div>
           <div className="img-2 mt-4">
             <img
-              src="/src/assets/img/about-img-1.jpg"
-              className="img-fluid rounded w-100"
-              alt="About Detail"
-            />
+  src={aboutImg1}
+  className="img-fluid rounded w-100"
+  alt="About Detail"
+/>
           </div>
         </div>
       </div>
@@ -279,7 +241,7 @@ const About = () => {
 {/* Fact Counter End */}
 
 {/* Features Start */}
-<div className="container-fluid feature py-5">
+ <div className="container-fluid feature py-5 feature-section">
   <div className="container py-5">
     <div
       className="text-center mx-auto pb-5 wow fadeInUp"
@@ -332,12 +294,12 @@ const About = () => {
 
       {/* Center Image */}
       <div className="col-lg-12 col-xl-4 wow fadeInUp" data-wow-delay="0.2s">
-        <img
-          src="/src/assets/img/features-img.png"
-          className="img-fluid w-100"
-          style={{ objectFit: 'cover' }}
-          alt="Features"
-        />
+       <img
+  src={featuresImg}
+  className="img-fluid w-100"
+  style={{ objectFit: 'cover' }}
+  alt="Features"
+/>
       </div>
 
       {/* Right Features */}

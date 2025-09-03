@@ -1,9 +1,13 @@
-
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { Link } from "react-router-dom";
 import "../assets/css/style.css";
+import testimonial1 from "../assets/img/testimonial-1.jpg";
+import testimonial2 from "../assets/img/testimonial-2.jpg";
+import testimonial3 from "../assets/img/testimonial-3.jpg";
+import Navbar from "../pages/Navbar"
+const images = [testimonial1, testimonial2, testimonial3];
 
 const Testimonial = () => {
   useEffect(() => {
@@ -42,41 +46,7 @@ const Testimonial = () => {
       </div>
       {/* Topbar End */}
 
-      {/* Navbar & Hero */}
-      <div className="container-fluid nav-bar sticky-top px-0 px-lg-4 py-2 py-lg-0">
-        <div className="container">
-          <nav className="navbar navbar-expand-lg navbar-light">
-            <Link to="/" className="navbar-brand p-0">
-              <h2 className="m-0 text-primary">
-                        <i className="fa fa-car me-2"></i>CarRental
-                      </h2>
-            </Link>
-            <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-              <span className="fa fa-bars"></span>
-            </button>
-            <div className="collapse navbar-collapse" id="navbarCollapse">
-              <div className="navbar-nav mx-auto py-0">
-                <Link to="/" className="nav-item nav-link">Home</Link>
-                <Link to="/about" className="nav-item nav-link">About</Link>
-                <Link to="/service" className="nav-item nav-link">Service</Link>
-                <Link to="/blog" className="nav-item nav-link">Blog</Link>
-                <div className="nav-item dropdown">
-                  <Link to="#" className="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Pages</Link>
-                  <div className="dropdown-menu m-0">
-                    <Link to="/feature" className="dropdown-item">Our Feature</Link>
-                    <Link to="/cars" className="dropdown-item">Our Cars</Link>
-                    <Link to="/team" className="dropdown-item">Our Team</Link>
-                    <Link to="/testimonial" className="dropdown-item active">Testimonial</Link>
-                   
-                  </div>
-                </div>
-                <Link to="/contact" className="nav-item nav-link">Contact</Link>
-              </div>
-              <Link to="#" className="btn btn-primary rounded-pill py-2 px-4">Get Started</Link>
-            </div>
-          </nav>
-        </div>
-      </div>
+       <Navbar />
 
       {/* Header Start */}
       <div className="container-fluid bg-breadcrumb">
@@ -91,7 +61,7 @@ const Testimonial = () => {
       {/* Header End */}
 
       {/* Testimonial Section */}
-      <div className="container-fluid testimonial py-5">
+      <div className="container-fluid testimonial py-5" style={{ backgroundColor: "#f5f7fa" }}>
         <div className="container py-5">
           <div className="text-center mx-auto pb-5" data-aos="fade-up" style={{ maxWidth: 800 }}>
             <h1 className="display-5 text-capitalize mb-3">Our Clients<span className="text-primary"> Reviews</span></h1>
@@ -103,7 +73,8 @@ const Testimonial = () => {
                 <div className="testimonial-item">
                   <div className="testimonial-quote"><i className="fa fa-quote-right fa-2x"></i></div>
                   <div className="testimonial-inner p-4 d-flex">
-                    <img src={`/src/assets/img/testimonial-${i}.jpg`} className="img-fluid" alt="" />
+                   <img src={images[i - 1]} className="img-fluid" alt="" />
+
                     <div className="ms-4">
                       <h4>Person Name</h4>
                       <p>Profession</p>

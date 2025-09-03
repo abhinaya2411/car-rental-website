@@ -25,8 +25,12 @@
 a:hover {
   text-decoration: none !important;
 }
-
-
+.hero-bg {
+  background-color: #78b5ea; /* Replace with your desired color */
+}
+.feature-section {
+  background-color: #c3c7d6   !important;  /* Replace with your color */
+}
 .back-to-top {
   position: fixed;
   right: 30px;

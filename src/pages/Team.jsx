@@ -3,6 +3,12 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { Link } from "react-router-dom";
 import "../assets/css/style.css";
+import team1 from "../assets/img/team-1.jpg";
+import team2 from "../assets/img/team-2.jpg";
+import team3 from "../assets/img/team-3.jpg";
+import team4 from "../assets/img/team-4.jpg";
+import Navbar from "../pages/Navbar"
+const teamImages = [team1, team2, team3, team4];
 
 const Team = () => {
   useEffect(() => {
@@ -49,69 +55,7 @@ const Team = () => {
       </div>
       {/* Topbar End */}
 
-      {/* Navbar Start */}
-      <div className="container-fluid nav-bar sticky-top px-0 px-lg-4 py-2 py-lg-0">
-        <div className="container">
-          <nav className="navbar navbar-expand-lg navbar-light">
-            <Link to="/" className="navbar-brand p-0">
-             <h2 className="m-0 text-primary">
-                        <i className="fa fa-car me-2"></i>CarRental
-                      </h2>
-            </Link>
-            <button
-              className="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarCollapse"
-            >
-              <span className="fa fa-bars"></span>
-            </button>
-            <div className="collapse navbar-collapse" id="navbarCollapse">
-              <div className="navbar-nav mx-auto py-0">
-                <Link to="/" className="nav-item nav-link">
-                  Home
-                </Link>
-                <Link to="/about" className="nav-item nav-link">
-                  About
-                </Link>
-                <Link to="/service" className="nav-item nav-link">
-                  Service
-                </Link>
-                <Link to="/blog" className="nav-item nav-link">
-                  Blog
-                </Link>
-                <div className="nav-item dropdown">
-                  <Link to="#" className="nav-link dropdown-toggle active" data-bs-toggle="dropdown">
-                    Pages
-                  </Link>
-                  <div className="dropdown-menu m-0">
-                    <Link to="/features" className="dropdown-item">
-                      Our Feature
-                    </Link>
-                    <Link to="/cars" className="dropdown-item">
-                      Our Cars
-                    </Link>
-                    <Link to="/team" className="dropdown-item active">
-                      Our Team
-                    </Link>
-                    <Link to="/testimonial" className="dropdown-item">
-                      Testimonial
-                    </Link>
-                    
-                  </div>
-                </div>
-                <Link to="/contact" className="nav-item nav-link">
-                  Contact
-                </Link>
-              </div>
-              <Link to="/login" className="btn btn-primary rounded-pill py-2 px-4">
-              Login
-              </Link>
-            </div>
-          </nav>
-        </div>
-      </div>
-      {/* Navbar End */}
+      <Navbar />
 
       {/* Header Start */}
       <div className="container-fluid bg-breadcrumb">
@@ -148,11 +92,12 @@ const Team = () => {
               <div className="col-md-6 col-lg-6 col-xl-3" data-aos="fade-up" data-aos-delay={`${i * 200}`}>
                 <div className="team-item p-4 pt-0">
                   <div className="team-img">
-                    <img
-                      src={`/src/assets/img/team-${n}.jpg`}
-                      className="img-fluid rounded w-100"
-                      alt={`Team ${n}`}
-                    />
+                  <img
+  src={teamImages[i]}
+  className="img-fluid rounded w-100"
+  alt={`Team ${n}`}
+/>
+
                   </div>
                   <div className="team-content pt-4">
                     <h4>MARTIN DOE</h4>

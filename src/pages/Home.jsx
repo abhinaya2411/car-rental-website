@@ -6,6 +6,10 @@ import "../assets/css/style.css";
 import CountUp from "react-countup";
 import featureImg from "../assets/img/features-img.png";
 import carousel1 from "../assets/img/carousel-1.jpg";
+import carousel2 from "../assets/img/carousel-2.jpg";
+
+import banner1 from "../assets/img/banner-1.jpg";
+
 import aboutIcon1 from "../assets/img/about-icon-1.png";
 import aboutIcon2 from "../assets/img/about-icon-2.png";
 import aboutImg1 from "../assets/img/about-img.jpg";
@@ -57,57 +61,58 @@ const Home = () => {
       </div>
       {/* Topbar End */}
 
-      {/* Navbar Start */}
-      <nav className="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0 shadow-sm">
-        <div className="container">
-          <Link to="/" className="navbar-brand d-flex align-items-center px-4 px-lg-0">
-            <h2 className="m-0 text-primary">
-              <i className="fa fa-car me-2"></i>CarRental
-            </h2>
-          </Link>
-          <button
-            className="navbar-toggler me-4"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarCollapse"
-          >
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <div className="collapse navbar-collapse" id="navbarCollapse">
-            <div className="navbar-nav ms-auto p-4 p-lg-0">
-              <Link to="/" className="nav-item nav-link active">
-                Home
-              </Link>
-              <Link to="/about" className="nav-item nav-link">
-                About
-              </Link>
-              <Link to="/service" className="nav-item nav-link">
-                Service
-              </Link>
-              <Link to="/cars" className="nav-item nav-link">
-                Cars
-              </Link>
-              <Link to="/team" className="nav-item nav-link">
-                Team
-              </Link>
-              <Link to="/blog" className="nav-item nav-link">
-                Blog
-              </Link>
-              <Link to="/contact" className="nav-item nav-link">
-                Contact
-              </Link>
-              <Link to="/login" className="nav-item nav-link text-primary ">
-                Login
-              </Link>
+     {/* Navbar Start */}
+<nav className="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0 shadow-sm">
+  <div className="container">
+    <Link to="/" className="navbar-brand d-flex align-items-center px-4 px-lg-0">
+      <h2 className="m-0 text-primary">
+        <i className="fa fa-car me-2"></i>CarRental
+      </h2>
+    </Link>
+    <button
+      className="navbar-toggler me-4"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarCollapse"
+    >
+      <span className="navbar-toggler-icon"></span>
+    </button>
+    <div className="collapse navbar-collapse" id="navbarCollapse">
+      <div className="navbar-nav ms-auto p-4 p-lg-0">
+        <Link to="/" className="nav-item nav-link active">
+          Home
+        </Link>
+        <Link to="/about" className="nav-item nav-link">
+          About
+        </Link>
+        <Link to="/service" className="nav-item nav-link">
+          Service
+        </Link>
+        <Link to="/cars" className="nav-item nav-link">
+          Cars
+        </Link>
+        <Link to="/team" className="nav-item nav-link">
+          Team
+        </Link>
+        <Link to="/blog" className="nav-item nav-link">
+          Blog
+        </Link>
+        <Link to="/contact" className="nav-item nav-link">
+          Contact
+        </Link>
+        {/* Home page has Login link styled differently */}
+        <Link to="/login" className="nav-item nav-link text-primary fw-bold">
+          Login
+        </Link>
+      </div>
+    </div>
+  </div>
+</nav>
+{/* Navbar End */}
 
-            </div>
-          </div>
-        </div>
-      </nav>
-      {/* Navbar End */}
 
       {/* Hero Start */}
-      <div className="container-fluid bg-light p-0 mb-5">
+      <div className="container-fluid hero-bg p-0 mb-5">
         <div className="container-fluid hero-header">
           <div className="container py-5">
             <div className="row g-5 align-items-center">
@@ -127,11 +132,12 @@ const Home = () => {
               </div>
               <div className="col-lg-6 text-center text-lg-end">
                 <img
-                  className="img-fluid animated zoomIn"
-                  src="/src/assets/img/carousel-2.jpg"
-                  alt="Car Rental Hero"
-                  data-aos="zoom-in"
-                />
+  className="img-fluid animated zoomIn"
+  src={carousel2}
+  alt="Car Rental Hero"
+  data-aos="zoom-in"
+/>
+
               </div>
             </div>
           </div>
@@ -264,7 +270,7 @@ const Home = () => {
 
     
    {/* Features Start */}
-      <div className="container-fluid feature py-5">
+   <div className="container-fluid feature py-5 feature-section">
         <div className="container py-5">
           <div
             className="text-center mx-auto pb-5 wow fadeInUp"
@@ -553,7 +559,8 @@ const Home = () => {
 <div className="container-fluid banner py-5" data-aos="zoom-in-down">
   <div className="container py-5">
     <div className="banner-item rounded position-relative overflow-hidden">
-      <img src="/src/assets/img/banner-1.jpg" className="img-fluid rounded w-100" alt="Banner" />
+     <img src={banner1} className="img-fluid rounded w-100" alt="Banner" />
+
       <div className="banner-content position-absolute top-50 start-50 translate-middle text-center">
         <h2 className="text-primary">Rent Your Car</h2>
         <h1 className="text-white">Interested in Renting?</h1>

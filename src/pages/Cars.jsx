@@ -3,7 +3,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { Link } from "react-router-dom";
 import "../assets/css/style.css"; // Your custom CSS
-
+import Navbar from "../pages/Navbar"
 // Importing images
 import banner1 from "../assets/img/banner-1.jpg";
 import car1 from "../assets/img/car-1.png";
@@ -66,45 +66,7 @@ const Cars = () => {
         </div>
       </div>
 
-      {/* Navbar */}
-      <div className="container-fluid nav-bar sticky-top px-0 px-lg-4 py-2 py-lg-0">
-        <div className="container">
-          <nav className="navbar navbar-expand-lg navbar-light">
-            <Link to="/" className="navbar-brand p-0">
-             <h2 className="m-0 text-primary">
-                        <i className="fa fa-car me-2"></i>CarRental
-                      </h2>
-            </Link>
-            <button
-              className="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarCollapse"
-            >
-              <span className="fa fa-bars"></span>
-            </button>
-            <div className="collapse navbar-collapse" id="navbarCollapse">
-              <div className="navbar-nav mx-auto py-0">
-                <Link to="/" className="nav-item nav-link">
-                  Home
-                </Link>
-                <Link to="/about" className="nav-item nav-link">
-                  About
-                </Link>
-                <a href="#" className="nav-item nav-link active">
-                  Cars
-                </a>
-                <Link to="/contact" className="nav-item nav-link">
-                  Contact
-                </Link>
-              </div>
-              <a href="/login" className="btn btn-primary rounded-pill py-2 px-4">
-                Login
-              </a>
-            </div>
-          </nav>
-        </div>
-      </div>
+     <Navbar />
 
       {/* Header */}
       <div className="container-fluid bg-breadcrumb">

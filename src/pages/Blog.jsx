@@ -4,8 +4,13 @@ import "aos/dist/aos.css";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
 import "../assets/css/style.css";
-
+import Navbar from "../pages/Navbar"
+import banner1 from "../assets/img/banner-1.jpg";
 import OwlCarousel from "react-owl-carousel";
+import blog1 from "../assets/img/blog-1.jpg";
+import blog2 from "../assets/img/blog-2.jpg";
+import blog3 from "../assets/img/blog-3.jpg";
+
 
 const Blog = () => { 
   useEffect(() => {
@@ -14,23 +19,12 @@ const Blog = () => {
 
 
 
-  const blogPosts = [
-    {
-      img: "blog-1.jpg",
-      date: "30 Dec 2025",
-      title: "Rental Cars how to check driving fines?",
-    },
-    {
-      img: "blog-2.jpg",
-      date: "25 Dec 2025",
-      title: "Rental cost of sport and other cars",
-    },
-    {
-      img: "blog-3.jpg",
-      date: "27 Dec 2025",
-      title: "Document required for car rental",
-    },
-  ];
+ const blogPosts = [
+  { img: blog1, date: "30 Dec 2025", title: "Rental Cars how to check driving fines?" },
+  { img: blog2, date: "25 Dec 2025", title: "Rental cost of sport and other cars" },
+  { img: blog3, date: "27 Dec 2025", title: "Document required for car rental" }
+];
+
 
   return (
     <>
@@ -64,47 +58,8 @@ const Blog = () => {
       </div>
       {/* Topbar End */}
 
+       <Navbar />
 
-{/* Navbar & Hero Start */}
-<div className="container-fluid nav-bar sticky-top px-0 px-lg-4 py-2 py-lg-0">
-  <div className="container">
-    <nav className="navbar navbar-expand-lg navbar-light">
-      <a href="/" className="navbar-brand p-0">
-        <h2 className="m-0 text-primary">
-                        <i className="fa fa-car me-2"></i>CarRental
-                      </h2>
-      </a>
-      <button
-        className="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarCollapse"
-      >
-        <span className="fa fa-bars"></span>
-      </button>
-      <div className="collapse navbar-collapse" id="navbarCollapse">
-        <div className="navbar-nav mx-auto py-0">
-          <a href="/" className="nav-item nav-link">Home</a>
-          <a href="/about" className="nav-item nav-link">About</a>
-          <a href="/service" className="nav-item nav-link">Service</a>
-          <a href="/blog" className="nav-item nav-link active">Blog</a>
-          <div className="nav-item dropdown">
-            <a href="#" className="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
-            <div className="dropdown-menu m-0">
-              <a href="/feature" className="dropdown-item">Our Feature</a>
-              <a href="/cars" className="dropdown-item">Our Cars</a>
-              <a href="/team" className="dropdown-item">Our Team</a>
-              <a href="/testimonial" className="dropdown-item">Testimonial</a>
-            </div>
-          </div>
-          <a href="/contact" className="nav-item nav-link">Contact</a>
-        </div>
-        <a href="/login" className="btn btn-primary rounded-pill py-2 px-4">Login</a>
-      </div>
-    </nav>
-  </div>
-</div>
-{/* Navbar & Hero End */}
 
 
       {/* Header Start */}
@@ -146,7 +101,8 @@ const Blog = () => {
               <div className="item" key={i}>
                 <div className="blog-item">
                   <div className="blog-img">
-                    <img src={`/src/assets/img/${item.img}`} className="img-fluid rounded-top w-100" alt="Blog" />
+                   <img src={item.img} className="img-fluid rounded-top w-100" alt="Blog" />
+
                   </div>
                   <div className="blog-content rounded-bottom p-4">
                     <div className="blog-date">{item.date}</div>
@@ -228,7 +184,7 @@ const Blog = () => {
 <div className="container-fluid banner py-5" data-aos="zoom-in-down">
   <div className="container py-5">
     <div className="banner-item rounded position-relative overflow-hidden">
-      <img src="/src/assets/img/banner-1.jpg" className="img-fluid rounded w-100" alt="Banner" />
+<img src={banner1} className="img-fluid rounded w-100" alt="Banner" />
       <div className="banner-content position-absolute top-50 start-50 translate-middle text-center">
         <h2 className="text-primary">Rent Your Car</h2>
         <h1 className="text-white">Interested in Renting?</h1>

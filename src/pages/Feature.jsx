@@ -4,10 +4,13 @@ import "aos/dist/aos.css";
 import "../assets/css/style.css";
 import { Link } from "react-router-dom";
 import CountUp from "react-countup";
+import banner1 from "../assets/img/banner-1.jpg";
+import featuresImg from "../assets/img/features-img.png";
+import Navbar from "../pages/Navbar"
+
 
 const Feature = () => {
   
-
   // Initialize AOS
   useEffect(() => {
     AOS.init({ duration: 1000 });
@@ -40,41 +43,7 @@ const Feature = () => {
         </div>
       </div>
 
-      {/* Navbar */}
-      <div className="container-fluid nav-bar sticky-top px-0 px-lg-4 py-2 py-lg-0">
-        <div className="container">
-          <nav className="navbar navbar-expand-lg navbar-light">
-            <Link to="/" className="navbar-brand p-0">
-             <h2 className="m-0 text-primary">
-                        <i className="fa fa-car me-2"></i>CarRental
-                      </h2>
-            </Link>
-            <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-              <span className="fa fa-bars"></span>
-            </button>
-            <div className="collapse navbar-collapse" id="navbarCollapse">
-              <div className="navbar-nav mx-auto py-0">
-                <Link to="/" className="nav-item nav-link">Home</Link>
-                <Link to="/about" className="nav-item nav-link">About</Link>
-                <Link to="/service" className="nav-item nav-link">Service</Link>
-                <Link to="/blog" className="nav-item nav-link">Blog</Link>
-                <div className="nav-item dropdown">
-                  <a href="#" className="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Pages</a>
-                  <div className="dropdown-menu m-0">
-                    <Link to="/feature" className="dropdown-item active">Our Feature</Link>
-                    <Link to="/cars" className="dropdown-item">Our Cars</Link>
-                    <Link to="/team" className="dropdown-item">Our Team</Link>
-                    <Link to="/testimonial" className="dropdown-item">Testimonial</Link>
-                  
-                  </div>
-                </div>
-                <Link to="/contact" className="nav-item nav-link">Contact</Link>
-              </div>
-              <a href="/login" className="btn btn-primary rounded-pill py-2 px-4">Login</a>
-            </div>
-          </nav>
-        </div>
-      </div>
+     <Navbar />
 
       {/* Header */}
       <div className="container-fluid bg-breadcrumb">
@@ -88,7 +57,7 @@ const Feature = () => {
       </div>
 
       {/* Feature Section */}
-      <div className="container-fluid feature py-5">
+      <div className="container-fluid feature py-5 feature-section">
         <div className="container py-5">
           <div className="text-center mx-auto pb-5" data-aos="fade-up" style={{ maxWidth: "800px" }}>
             <h1 className="display-5 text-capitalize mb-3">Car <span className="text-primary">Features</span></h1>
@@ -121,7 +90,7 @@ const Feature = () => {
 
             {/* Center Image */}
             <div className="col-lg-12 col-xl-4" data-aos="fade-up" data-aos-delay="200">
-              <img src="/src/assets/img/features-img.png" className="img-fluid w-100" alt="Feature" />
+             <img src={featuresImg} className="img-fluid w-100" alt="Feature" />
             </div>
 
             {/* Right */}
@@ -180,7 +149,8 @@ const Feature = () => {
       <div className="container-fluid banner py-5" data-aos="zoom-in">
         <div className="container py-5">
           <div className="banner-item rounded">
-            <img src="/src/assets/img/banner-1.jpg" className="img-fluid rounded w-100" alt="Banner" />
+     
+           <img src={banner1} className="img-fluid rounded w-100" alt="Banner" />
             <div className="banner-content">
               <h2 className="text-primary">Rent Your Car</h2>
               <h1 className="text-white">Interested in Renting?</h1>

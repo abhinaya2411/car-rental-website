@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "../assets/css/style.css"; // adjust path if needed
-
+import Navbar from "../pages/Navbar"
 function Contact() {
 
   // Initialize AOS
@@ -55,44 +55,7 @@ function Contact() {
       </div>
       {/* Topbar End */}
 
-      {/* Navbar Start */}
-      <div className="container-fluid nav-bar sticky-top px-0 px-lg-4 py-2 py-lg-0">
-        <div className="container">
-          <nav className="navbar navbar-expand-lg navbar-light">
-            <Link to="/" className="navbar-brand p-0">
-             <h2 className="m-0 text-primary">
-                        <i className="fa fa-car me-2"></i>CarRental
-                      </h2>
-            </Link>
-            <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-              <span className="fa fa-bars"></span>
-            </button>
-            <div className="collapse navbar-collapse" id="navbarCollapse">
-              <div className="navbar-nav mx-auto py-0">
-                <Link to="/" className="nav-item nav-link">Home</Link>
-                <Link to="/about" className="nav-item nav-link">About</Link>
-                <Link to="/service" className="nav-item nav-link">Service</Link>
-                <Link to="/blog" className="nav-item nav-link">Blog</Link>
-
-                <div className="nav-item dropdown">
-                  <Link to="#" className="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</Link>
-                  <div className="dropdown-menu m-0">
-                    <Link to="/feature" className="dropdown-item">Our Feature</Link>
-                    <Link to="/cars" className="dropdown-item">Our Cars</Link>
-                    <Link to="/team" className="dropdown-item">Our Team</Link>
-                    <Link to="/testimonial" className="dropdown-item">Testimonial</Link>
-                    
-                  </div>
-                </div>
-
-                <Link to="/contact" className="nav-item nav-link active">Contact</Link>
-              </div>
-              <Link to="/login" className="btn btn-primary rounded-pill py-2 px-4">Login</Link>
-            </div>
-          </nav>
-        </div>
-      </div>
-      {/* Navbar End */}
+    <Navbar />
 
       {/* Header Start */}
       <div className="container-fluid bg-breadcrumb">
@@ -107,7 +70,7 @@ function Contact() {
       {/* Header End */}
 
       {/* Contact Start */}
-      <div className="container-fluid contact py-5">
+      <div className="container-fluid contact py-5"style={{ backgroundColor: "#ccdbe7ff" }}>
         <div className="container py-5">
           <div className="text-center mx-auto pb-5" data-aos="fade-up" data-aos-delay="100" style={{ maxWidth: "800px" }}>
             <h1 className="display-5 text-capitalize text-primary mb-3">Contact Us</h1>
@@ -187,7 +150,7 @@ function Contact() {
             <div className="col-12 col-xl-5" data-aos="fade-up" data-aos-delay="100">
               <div className="p-5 bg-light rounded">
                 {[1, 2, 3].map((num, i) => (
-                  <div className="bg-white rounded p-4 mb-4" key={i}>
+                  <div className="bg rounded p-4 mb-4" key={i}style={{ backgroundColor: "#a8d0f0" }}>
                     <h4 className="mb-3">Our Branch 0{num}</h4>
                     <div className="d-flex align-items-center mb-3">
                       <p className="mb-0 text-dark me-2">Address:</p>
