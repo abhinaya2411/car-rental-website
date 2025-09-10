@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react';
 import { fileURLToPath, URL } from 'url';
 
 export default defineConfig({
-  base: '/car-rental-website/', // 👈 correct repo name, no extra space
+  base: '/car-rental-website/',
   plugins: [react()],
   resolve: {
     alias: {

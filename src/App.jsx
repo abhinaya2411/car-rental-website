@@ -1,5 +1,5 @@
 import React from 'react';
-import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import 'animate.css';
 import About from './pages/About';
 import Cars from './pages/Cars';
@@ -12,11 +12,14 @@ import Feature from "./pages/Feature";
 import Home from "./pages/Home";
 import Login from "./pages/Login"; 
 import Register from "./pages/Register";
+import Topbar from "./pages/Topbar";
+import Footer from "./pages/Footer";
 import BackToTop from "./pages/BackToTop";
 
 function App() {
   return (
-    <Router>
+    <>
+       <Topbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/feature" element={<Feature />} />
@@ -31,8 +34,9 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="*" element={<h1>404 - Page Not Found</h1>} />
       </Routes>
+        <Footer />
       <BackToTop />
-    </Router>
+  </>
   );
 }
 

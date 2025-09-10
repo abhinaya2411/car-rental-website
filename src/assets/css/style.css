@@ -19,17 +19,43 @@
   height: auto;
   object-fit: cover;
 } */
- a {
+
+/* Custom Topbar */
+.topbar {
+  background-color: rgba(
+    30,
+    30,
+    47,
+    0.6
+  ); /* Change to your preferred background */
+  color: #fff;
+}
+
+/* Links Styling */
+.topbar-link {
+  color: #ddd;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover Effect */
+.topbar-link:hover {
+  color: #0091ff; /* Change text color on hover */
+  transform: translateY(-2px); /* Slight lift */
+}
+
+a {
   text-decoration: none !important;
 }
 a:hover {
   text-decoration: none !important;
 }
 .hero-bg {
-  background-color: #78b5ea; /* Replace with your desired color */
+  background-color: #78b5ea;
 }
 .feature-section {
-  background-color: #c3c7d6   !important;  /* Replace with your color */
+  background-color: #c3c7d6;
 }
 .back-to-top {
   position: fixed;
@@ -54,7 +80,6 @@ a:hover {
   padding: 0;
 }
 
-
 /*** Button Start ***/
 
 .btn {
@@ -77,7 +102,6 @@ a:hover {
   align-items: center !important;
   justify-content: center !important;
 }
-
 
 .btn-md-square {
   width: 44px;

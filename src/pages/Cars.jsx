@@ -26,45 +26,7 @@ const Cars = () => {
 
   return (
     <>
-      {/* Topbar */}
-      <div className="container-fluid topbar bg-secondary d-none d-xl-block w-100">
-        <div className="container">
-          <div className="row gx-0 align-items-center" style={{ height: "45px" }}>
-            <div className="col-lg-6 text-center text-lg-start mb-lg-0">
-              <div className="d-flex flex-wrap">
-                <a href="#" className="text-muted me-4">
-                  <i className="fas fa-map-marker-alt text-primary me-2"></i>
-                  Find A Location
-                </a>
-                <a href="tel:+01234567890" className="text-muted me-4">
-                  <i className="fas fa-phone-alt text-primary me-2"></i>
-                  +01234567890
-                </a>
-                <a href="mailto:example@gmail.com" className="text-muted me-0">
-                  <i className="fas fa-envelope text-primary me-2"></i>
-                  Example@gmail.com
-                </a>
-              </div>
-            </div>
-            <div className="col-lg-6 text-center text-lg-end">
-              <div className="d-flex align-items-center justify-content-end">
-                <a href="#" className="btn btn-light btn-sm-square rounded-circle me-3">
-                  <i className="fab fa-facebook-f"></i>
-                </a>
-                <a href="#" className="btn btn-light btn-sm-square rounded-circle me-3">
-                  <i className="fab fa-twitter"></i>
-                </a>
-                <a href="#" className="btn btn-light btn-sm-square rounded-circle me-3">
-                  <i className="fab fa-instagram"></i>
-                </a>
-                <a href="#" className="btn btn-light btn-sm-square rounded-circle me-0">
-                  <i className="fab fa-linkedin-in"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      
 
      <Navbar />
 
@@ -221,78 +183,6 @@ const Cars = () => {
           </div>
         </div>
       </section>
-
-      {/* Footer */}
-      <footer
-        className="container-fluid footer bg-dark text-white py-5"
-        data-aos="fade-up"
-      >
-        <div className="container py-5">
-          <div className="row g-5">
-            <div className="col-lg-3">
-              <h4>About Us</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
-              <input
-                className="form-control rounded-pill mb-2"
-                type="text"
-                placeholder="Enter email"
-              />
-              <button className="btn btn-secondary rounded-pill">
-                Subscribe
-              </button>
-            </div>
-            <div className="col-lg-3">
-              <h4>Quick Links</h4>
-              <ul className="list-unstyled">
-                <li>
-                  <a href="#">About</a>
-                </li>
-                <li>
-                  <a href="#">Cars</a>
-                </li>
-                <li>
-                  <a href="#">Car Types</a>
-                </li>
-                <li>
-                  <a href="#">Team</a>
-                </li>
-                <li>
-                  <a href="#">Contact</a>
-                </li>
-              </ul>
-            </div>
-            <div className="col-lg-3">
-              <h4>Business Hours</h4>
-              <p>Mon - Fri: 9am - 7pm</p>
-              <p>Sat: 10am - 5pm</p>
-              <p>Sun: Closed</p>
-            </div>
-            <div className="col-lg-3">
-              <h4>Contact Info</h4>
-              <p>
-                <i className="fa fa-map-marker-alt me-2"></i> 123 Street, City
-              </p>
-              <p>
-                <i className="fa fa-envelope me-2"></i> info@example.com
-              </p>
-              <p>
-                <i className="fa fa-phone me-2"></i> +012 345 6789
-              </p>
-              <div className="d-flex gap-2 mt-2">
-                <a className="btn btn-secondary btn-sm" href="#">
-                  <i className="fab fa-facebook-f"></i>
-                </a>
-                <a className="btn btn-secondary btn-sm" href="#">
-                  <i className="fab fa-twitter"></i>
-                </a>
-                <a className="btn btn-secondary btn-sm" href="#">
-                  <i className="fab fa-instagram"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </footer>
 
       
     </>

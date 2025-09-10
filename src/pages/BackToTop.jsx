@@ -1,4 +1,4 @@
-import  { useState, useEffect } from "react";
+import { useState, useEffect } from 'react';
 
 const BackToTop = () => {
   const [showTop, setShowTop] = useState(false);
@@ -8,23 +8,25 @@ const BackToTop = () => {
       setShowTop(window.scrollY > 300);
     };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   const scrollTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   return (
     <button
       onClick={scrollTop}
-      className={`btn btn-primary btn-lg-square back-to-top ${showTop ? "show" : ""}`}
+      className={`btn btn-primary btn-lg-square back-to-top ${
+        showTop ? 'show' : ''
+      }`}
       style={{
-        position: "fixed",
+        position: 'fixed',
         right: 20,
         bottom: 20,
-        display: showTop ? "inline-flex" : "none",
+        display: showTop ? 'inline-flex' : 'none',
         zIndex: 9999,
       }}
     >
